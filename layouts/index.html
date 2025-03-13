@@ -1,0 +1,22 @@
+{{ define "main" }}
+<div class="container mx-auto px-4 py-8">
+    <h1 class="text-4xl font-bold mb-8 text-center">{{ .Title }}</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {{ range .Resources }}
+            {{ if eq .ResourceType "application" }}
+            <div class="border rounded p-4 hover:shadow-sm transition-shadow">
+                <h2 class="text-lg font-semibold mb-2">{{ .Params.title }}</h2>
+                <div class="flex justify-between items-center">
+                    <span class="text-sm text-gray-600">{{ .Name }}</span>
+                    <a href="{{ .RelPermalink }}" 
+                       class="text-blue-600 hover:text-blue-800"
+                       target="_blank">
+                        View PDF →
+                    </a>
+                </div>
+            </div>
+            {{ end }}
+        {{ end }}
+    </div>
+</div>
+{{ end }} 

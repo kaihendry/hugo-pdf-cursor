@@ -1,3 +1,25 @@
-baseURL: https://example.org/
+baseURL: http://localhost:1313/
 languageCode: en-us
-title: My New Hugo Site
+title: PDF Portfolio
+enableGitInfo: true
+
+build:
+  writeStats: true
+
+security:
+  enableInlineShortcodes: true
+
+mediaTypes:
+  application/pdf:
+    suffixes: ["pdf"]
+
+outputFormats:
+  PDF:
+    mediaType: application/pdf
+    isPlainText: true
+    isHTML: false
+
+module:
+  mounts:
+    - source: content
+      target: content
