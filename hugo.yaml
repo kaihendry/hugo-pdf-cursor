@@ -1,4 +1,4 @@
-baseURL: http://localhost:1313/
+baseURL: https://kaihendry.github.io/hugo-pdf-cursor/
 languageCode: en-us
 title: PDF Portfolio
 enableGitInfo: true

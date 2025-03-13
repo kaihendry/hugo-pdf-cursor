@@ -1,5 +1,5 @@
 ---
-title: PDF Portfolio
+title: Designs
 resources:
 - src: "blue.pdf"
   params:
